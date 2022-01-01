@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+    <title>COWIN APP</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+
+<!--fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&display=swap" rel="stylesheet">
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    
+</head>
+
+<body>
+
+  <nav class="navbar fixed-top navbar-light " style="background-color: rgb(2,31,97);" id = "navigationbar">
+    <a class="navbar-brand" href="#"><img src="cowin.jpg"  alt="Responsive image" class ="cowin"  ></a>
+  </nav>
+
+   <div class="container">
+   <img src="vaccinated.jpg"  alt="Responsive image"  class = "center">
+
+        <div class = "firstsection">
+        <p>Search Your Nearest Vaccination Center</p>
+        <h6>Get a preview list of the nearest centers and check availability of vaccination slots</h6>
+        </div>
+      
+        <div class="alert alert-primary" role="alert">
+          <li>Slots are updated by state vaccination centers and private hospitals everyday at 8AM, 12PM, 4PM, & 8PM.</li>
+          <li>Walk-in availableat all vaccination centers for age 18 years and above (For timings for walk-in vaccinations, please contact the vaccine center.)
+        </li>
+        </div>
+
+
+
+        
+        <div class ="secondsection">
+          
+              <div class="form-group col-md-8">
+                <label for="inputState">Search by Pin:</label>
+              <input type="number" maxlength="6" class="form-control" id="pin" placeholder="Enter pin" name="pin">
+              </div>
+              <div class="form-group1">
+              <button id="searchbtn" class="btn btn-primary">Search</button>
+              </div>
+        
+        </div>  
+
+      
+      <div class = "thirdsection">
+        <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select class="form-control" id="inputState">
+                        <option value="SelectState">Select State</option>
+                        <option value="Andra Pradesh">Andra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madya Pradesh">Madya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Orissa">Orissa</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttaranchal">Uttaranchal</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadeep">Lakshadeep</option>
+                        <option value="Pondicherry">Pondicherry</option>
+                      </select>
+          </div>
+      <div class="form-group col-md-4">
+        <label for="inputDistrict">District</label>
+        <select class="form-control" id="inputDistrict">
+        <option value="">-- select one -- </option>
+        </select>
+      </div>
+      <div class = form-group1>
+      <button id="searchbtn1" class="btn btn-primary">Search By District</button>
+      </div>
+    </div>
+
+      
+      
+
+        
+
+      
+
+        <table class="table table-striped" id="session">
+            <thead>
+                <tr>
+                    <th>Center ID</th>
+                    <th>Date</th>
+                    <th>Available Capacity Dose-1</th>
+                    <th>Available Capacity Dose-2</th>
+                    <th>Vaccine</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Fee</th>
+                    <th>Slots</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+  </div>
+
+
+  <footer class=" footer-sec">
+
+    <div class="footer-copyright text-center py-3">© 2022 Copyright <span class = "footer-name">Shalini</span> </div>
+  
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
